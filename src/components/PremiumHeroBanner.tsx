@@ -36,12 +36,12 @@ export function PremiumHeroBanner() {
   return (
     <section className="w-full bg-muted/20">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 py-3">
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_280px] gap-3">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_280px] gap-3 lg:h-[480px]">
           {/* Main Hero Carousel - Bigger */}
-          <div className="relative rounded-2xl overflow-hidden">
+          <div className="relative rounded-2xl overflow-hidden h-[260px] sm:h-[340px] md:h-[420px] lg:h-full">
             <AnimatePresence mode="wait">
               <motion.div key={current} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.5 }} className="relative">
-                <img src={slide.image} alt={slide.title} className="w-full h-[260px] sm:h-[340px] md:h-[420px] lg:h-[480px] object-cover" width={1920} height={640} />
+                <img src={slide.image} alt={slide.title} className="w-full h-full object-cover" width={1920} height={640} />
                 <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
                 <div className="absolute inset-0 flex items-center">
                   <div className="px-6 sm:px-10 md:px-14 max-w-xl">
