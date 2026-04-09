@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Star, ShoppingCart } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import { useCart } from "@/lib/cart";
 import type { Product } from "@/lib/data";
 
@@ -11,6 +12,7 @@ interface Props {
 
 export function ProductCard({ product, index = 0 }: Props) {
   const { addItem } = useCart();
+  const { t } = useTranslation();
 
   return (
     <motion.div
@@ -75,7 +77,7 @@ export function ProductCard({ product, index = 0 }: Props) {
           className="mt-3 w-full inline-flex items-center justify-center gap-1.5 px-3 py-2 bg-primary text-primary-foreground rounded-lg text-xs font-semibold hover:opacity-90 transition-opacity"
         >
           <ShoppingCart className="w-3.5 h-3.5" />
-          Add to Cart
+          {t("addToCart")}
         </button>
       </div>
     </motion.div>
