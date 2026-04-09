@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Star, ShoppingCart } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import { useCart } from "@/lib/cart";
 import type { Product } from "@/lib/data";
 
