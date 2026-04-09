@@ -12,6 +12,7 @@ interface Props {
 
 export function ProductCard({ product, index = 0 }: Props) {
   const { addItem } = useCart();
+  const { t } = useTranslation();
 
   return (
     <motion.div
