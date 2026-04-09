@@ -36,7 +36,7 @@ export function PremiumHeroBanner() {
   return (
     <section className="w-full bg-muted/20">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 py-3">
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_280px] gap-3">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_280px] gap-3" style={{ minHeight: 0 }}>
           {/* Main Hero Carousel - Bigger */}
           <div className="relative rounded-2xl overflow-hidden">
             <AnimatePresence mode="wait">
